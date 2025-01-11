@@ -17,7 +17,7 @@ const kumbhSans = Kumbh_Sans({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${inter.variable} ${kumbhSans.variable} bg-[#1E1E1E]`}>
+    <main className={`${inter.variable} ${kumbhSans.variable} bg-[#191919]`}>
       <title>Blog</title>
       <Component {...pageProps} />
     </main>
