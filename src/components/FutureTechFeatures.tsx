@@ -1,47 +1,58 @@
 import React from "react";
-import FutureTechnology from "./icons/futuretechnology";
 
-const FutureTechFeatures = () => {
-  const card = [
-    {
-      title: "Quantity",
-      description:
-        "Over 1,000 articles on emerging tech trends and breakthroughs.",
-    },
-    {
-      title: "Quantity",
-      description:
-        "Over 1,000 articles on emerging tech trends and breakthroughs.",
-    },
-    {
-      title: "Quantity",
-      description:
-        "Over 1,000 articles on emerging tech trends and breakthroughs.",
-    },
-    {
-      title: "Quantity",
-      description:
-        "Over 1,000 articles on emerging tech trends and breakthroughs.",
-    },
-  ];
+interface cardProps {
+  cardTitle: string;
+  cardDescription: string;
+}
+
+interface data {
+  icon: React.JSX.Element;
+  title: string;
+  description: string;
+  card: cardProps[];
+}
+
+interface futureTechArrayProps {
+  futureTechArray: data[];
+}
+
+const FutureTechFeatures: React.FC<futureTechArrayProps> = ({
+  futureTechArray,
+}) => {
   return (
-    <div className="bg-[#141414] flex font-inter border-b border-gray-800">
-      <div className=" py-20 border-r  pl-12 border-gray-800 pr-6">
-        <FutureTechnology />
-        <p className="font-semibold text-[28px] mt-6">Future Technology Blog</p>
-        <p className="text-gray-500 text-base">
-          Stay informed with our blog section dedicated to future technology.
-        </p>
-      </div>
-      <div className="px-10 py-20 grid grid-cols-2 gap-4">
-        {card.map((item, index) => (
-          <div key={index} className="bg-[#191919] rounded-[4px] p-6 h-[134px]">
-            <p className="font-medium text-lg text-white">{item.title}</p>
-            <p className="text-sm text-gray-500 mt-2">{item.description}</p>
+    <>
+      {futureTechArray.map((item, index) => (
+        <div
+          key={index}
+          className="bg-[#141414] flex lg:flex-row flex-col font-inter border-b border-gray-800"
+        >
+          <div className=" pt-32 border-r  pl-12 border-gray-800 pr-6">
+            {item.icon}
+            <p className="font-semibold sm:text-[28px] text-2xl mt-6">
+              {item.title}
+            </p>
+            <p className="text-gray-500 sm:text-base text-sm">
+              {item.description}
+            </p>
           </div>
-        ))}
-      </div>
-    </div>
+          <div className="px-10 py-20 grid sm:grid-cols-2 grid-cols-1 gap-4">
+            {item.card.map((cardItem, cardIndex) => (
+              <div
+                key={cardIndex}
+                className="bg-[#191919] rounded-[4px] p-6 h-[134px]"
+              >
+                <p className="font-medium text-lg text-white">
+                  {cardItem.cardTitle}
+                </p>
+                <p className="text-sm text-gray-500 mt-2">
+                  {cardItem.cardDescription}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </>
   );
 };
 
