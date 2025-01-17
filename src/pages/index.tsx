@@ -3,12 +3,14 @@ import FutureTechFeatures from "@/components/FutureTechFeatures";
 import HeroSectionImage from "@/components/HeroSectionImage";
 import HeroSectionTitle from "@/components/HeroSectionTitle";
 import Contributors from "@/components/icons/contributors";
+import Ebook from "@/components/icons/ebook";
 import FutureTechnology from "@/components/icons/futuretechnology";
 import News from "@/components/icons/news";
 import Readership from "@/components/icons/redership";
 import ResearchIcon from "@/components/icons/researchIcon";
 import Layout from "@/components/Layout";
 import NewsUpdates from "@/components/NewsUpdates";
+import ResourceBlog from "@/components/ResourceBlog";
 import Resources from "@/components/Resources";
 import React from "react";
 import { CgArrowTopRight } from "react-icons/cg";
@@ -105,6 +107,44 @@ export default function Home() {
       ],
     },
   ];
+  const resourcesArr = [
+    {
+      icon: <Ebook />,
+      title: "Ebooks",
+      description:
+        "Explore our collection of ebooks covering a wide spectrum of future technology topics.",
+      buttonText: "Download Ebooks Now",
+      topics: "Variety of Topics",
+      topicDescription:
+        "Topics include AI in education, renewable energy ,healthcare, space exploration, and biotechnology.",
+      image: "/ebook.png",
+      ebookTitle: "Total Ebooks",
+      totalEbook: "Over 100 ebooks",
+      downloadFormat: "Download Formats",
+      downloadFormatDescription: "PDF format for access.",
+      averageAuthor: "Average Author Expertise",
+      averageAuthorDescription:
+        "Ebooks are authored by renowned experts with an average of 15 years of experience",
+    },
+    {
+      icon: <Ebook />,
+      title: "Ebooks",
+      description:
+        "Explore our collection of ebooks covering a wide spectrum of future technology topics.",
+      buttonText: "Download Ebooks Now",
+      topics: "Variety of Topics",
+      topicDescription:
+        "Topics include AI in education, renewable energy ,healthcare, space exploration, and biotechnology.",
+      image: "/ebook.png",
+      ebookTitle: "Total Ebooks",
+      totalEbook: "Over 100 ebooks",
+      downloadFormat: "Download Formats",
+      downloadFormatDescription: "PDF format for access.",
+      averageAuthor: "Average Author Expertise",
+      averageAuthorDescription:
+        "Ebooks are authored by renowned experts with an average of 15 years of experience",
+    },
+  ];
   return (
     <Layout>
       <div className="font-inter">
@@ -126,21 +166,35 @@ export default function Home() {
         </div>
         <FutureTechFeatures futureTechArray={futureTechArray} />
         <div className="py-20 px-16 w-full flex justify-between items-center lg:flex-row flex-col ">
-        <div>
-          <p className="w-[224px] py-1 rounded-[4px] bg-[#333333] font-medium text-sm text-center">
-            A Knowledge Treasure Trove
-          </p>
-          <h1 className="sm:text-4xl text-2xl font-medium mt-4">
-            Explore FutureTech&apos;s In-Depth Blog Posts
-          </h1>
-        </div>
-        <button className="flex gap-1 px-4 py-3 text-sm border border-gray-800 rounded lg:mt-0 mt-8">
-          View All Blogs{" "}
-          <CgArrowTopRight className="text-yellow-300 sm:w-6 sm:h-6 w-5 h-5" />
-        </button>
-
+          <div>
+            <p className="w-[224px] py-1 rounded-[4px] bg-[#333333] font-medium text-sm text-center">
+              A Knowledge Treasure Trove
+            </p>
+            <h1 className="sm:text-4xl text-2xl font-medium mt-4">
+              Explore FutureTech&apos;s In-Depth Blog Posts
+            </h1>
+          </div>
+          <button className="flex gap-1 px-4 py-3 text-sm border border-gray-800 rounded lg:mt-0 mt-8">
+            View All Blogs{" "}
+            <CgArrowTopRight className="text-yellow-300 sm:w-6 sm:h-6 w-5 h-5" />
+          </button>
         </div>
         <ExploreFutureTech />
+        <div className="py-20 px-16 w-full flex justify-between items-center lg:flex-row flex-col ">
+          <div>
+            <p className="w-[274px] py-1 rounded-[4px] bg-[#333333] font-medium text-sm text-center">
+              Your Gateway to In-Depth Information
+            </p>
+            <h1 className="sm:text-4xl text-2xl font-medium mt-4">
+              Unlock Valuable Knowledge with FutureTech&apos;s <br /> Resources
+            </h1>
+          </div>
+          <button className="flex gap-1 px-4 py-3 text-sm border border-gray-800 rounded lg:mt-0 mt-8">
+            View All Resources{" "}
+            <CgArrowTopRight className="text-yellow-300 sm:w-6 sm:h-6 w-5 h-5" />
+          </button>
+        </div>
+        <ResourceBlog resourcesArr={resourcesArr} />
       </div>
     </Layout>
   );
