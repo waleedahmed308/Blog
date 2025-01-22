@@ -27,7 +27,7 @@ const Header = () => {
     },
   ];
   return (
-    <div className="py-6 lg:px-20 px-10 flex justify-between relative bg-[#141414]">
+    <div className="py-6 lg:px-20 px-10 flex justify-between relative bg-[#191919]">
       <div className="flex gap-2 items-center">
         <Logo />
         <p className="font-semibold text-lg">Future Tech</p>

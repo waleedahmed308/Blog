@@ -41,7 +41,7 @@ const ResourceBlog: React.FC<Resource> = ({ resourcesArr }) => {
           key={index}
           className="sm:px-16 px-10 font-inter bg-[#141414] flex lg:flex-row flex-col border-b border-gray-800"
         >
-          <div className="lg:w-[35%] w-full pt-36 lg:border-r border-gray-800 pr-16">
+          <div className="lg:w-[35%] w-full pt-36 lg:border-r border-gray-800 sm:pr-16">
             {resource.icon}
             <h1 className="font-semibold text-3xl mt-8">{resource.title}</h1>
             <p className="text-gray-500 mt-3 ">{resource.description}</p>
@@ -84,7 +84,7 @@ const ResourceBlog: React.FC<Resource> = ({ resourcesArr }) => {
                 <p className="text-sm text-gray-500">{resource.ebookTitle}</p>
                 <p className="font-semibold text-base">{resource.totalEbook}</p>
               </div>
-              <div className="bg-[#191919] w-5/6 h-[101px] rounded-[4px] border border-gray-800 px-4 flex justify-between items-center  ">
+              <div className="bg-[#191919] w-5/6 sm:h-[101px] rounded-[4px] border border-gray-800 px-4 flex sm:flex-row flex-col py-2 justify-between items-center  ">
                 <div>
                   <p className="text-sm text-gray-500">
                     {resource.downloadFormat}
@@ -101,7 +101,7 @@ const ResourceBlog: React.FC<Resource> = ({ resourcesArr }) => {
                 </button>
               </div>
             </div>
-            <div className="bg-[#191919] mb-12 w-full mt-6 h-[101px] flex flex-col px-4 justify-center rounded-[4px] border border-gray-800">
+            <div className="bg-[#191919] mb-12 w-full mt-6 sm:h-[101px] flex flex-col px-4 justify-center rounded-[4px] border border-gray-800">
               <p className="text-sm text-gray-500">{resource.averageAuthor}</p>
               <p className="font-medium text-base">
                 {resource.averageAuthorDescription}
