@@ -12,9 +12,10 @@ type Props = {
 
 type HeadlinesProps = {
   data: Props[];
+  className?:string;
 };
 
-export default function Headlines({ data }: HeadlinesProps) {
+export default function Headlines({ data,className }: HeadlinesProps) {
   const [hearctClicked, setHeartClicked] = useState<number[]>([]);
   const handleHeartClick = (index: number) => {
     setHeartClicked((prev) => {
@@ -29,7 +30,9 @@ export default function Headlines({ data }: HeadlinesProps) {
   };
 
   return (
-    <div className="w-full sm:px-20 px-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 border-t border-gray-800 pt-14">
+    <div
+      className={`w-full sm:px-20 px-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 border-t border-gray-800 py-14 ${className}`}
+    >
       {data.map((item, index) => (
         <div key={index} className="pb-4">
           <Image

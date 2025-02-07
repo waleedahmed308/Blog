@@ -18,8 +18,8 @@ const Header = () => {
       link: "/news",
     },
     {
-      title: "Podcast",
-      link: "/podcast",
+      title: "Podcasts",
+      link: "/podcasts",
     },
     {
       title: "Resources",
@@ -27,7 +27,7 @@ const Header = () => {
     },
   ];
   return (
-    <div className="py-6 lg:px-20 px-10 flex justify-between relative bg-[#191919]">
+    <div className="py-6 lg:px-20 px-10 font-inter flex justify-between relative bg-[#191919]">
       <div className="flex gap-2 items-center">
         <Logo />
         <p className="font-semibold text-lg">Future Tech</p>
@@ -37,10 +37,10 @@ const Header = () => {
           <Link
             href={item.link}
             key={index}
-            className={`w-[90px] h-[50px] grid place-content-center ${
+            className={`px-4 py-3 grid place-content-center ${
               item?.link === router?.pathname ||
               (router?.pathname?.startsWith(item?.link) && item?.link !== "/")
-                ? "bg-black border border-gray-900 rounded"
+                ? "bg-[#141414] border border-gray-800 rounded-[5px]"
                 : "text-gray-500"
             }`}
           >
